@@ -2,8 +2,17 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Work Sans', sans-serif;
+    overflow-x: hidden;
 }
-
+h2{
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+}
+p{
+    font-size: 18px;
+    font-weight: 400;
+}
 .btn {
     font-size: 20px;
     font-weight: 600;
@@ -12,7 +21,11 @@ body {
     text-transform: uppercase;
     cursor: pointer;
 }
-
+.btn-primary{
+    background-image: linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%);
+    border: 0;
+    color: #FFF;
+}
 /* nav related styles */
 nav {
     display: flex;
@@ -89,11 +102,11 @@ nav button span i:first-child {
 }
 
 .banner .banner-content {
-    max-width: 500px;
+    max-width: 700px;
 }
 
 .banner .profile-pic {
-    width: 500px;
+    width: 550px;
 }
 
 .banner .banner-title1 {
@@ -108,7 +121,7 @@ nav button span i:first-child {
     font-size: 95px;
     font-weight: 800;
     text-transform: uppercase;
-    margin-top: 0;
+    margin: 0;
     background: -webkit-linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -129,9 +142,6 @@ nav button span i:first-child {
     margin-top: 41px;
 }
 .banner button.btn1{  
-    background-image: linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%);
-    border: 0;
-    color: #FFF;
     margin-right: 24px;
 }
 .banner button.btn2{
@@ -139,7 +149,145 @@ nav button span i:first-child {
     border: 0;
     color: #FFF;
 }
+/* about section style */
+.about{
+    padding: 20px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+    background-image: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+}
+.about img{
+    max-width: 550px;
+}
+.about .about-info h2{
+    font-size: 48px;
+    font-weight: 700;
+    background: -webkit-linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.about .about-info .small-text{
+    margin-top: 24px;
+}
+.about .about-info small{
+    color: #534C64;
+    font-size: 24px;
+    font-weight: 500;
+}
+.about .about-info small span{
+    font-size: 32px;
+    font-weight: 700;
+}
+/* videos section style */
+.videos{
+    padding: 0 200px;
+    margin: 50px 0px;
+}
+.videos h2{
+    color: #0B0223;
+    text-align: center;
+}
+.videos h2 span{
+    background: -webkit-linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.videos p{
+    text-align: center;
+}
+.videos .videos-img-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    justify-content: center;
+    margin-top: 48px;
+}
+.videos .videos-img-container p{
+    text-align: start;
+    color: #534C64;
+    font-size: 20px;
+    font-weight: 500;
+}
+.videos .videos-img-container .overlay{
+    background-color: #000;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 17px;
+}
 
+.videos .videos-img-container .overlay img {
+    vertical-align: top;
+    width: 100%;
+    backface-visibility: hidden;
+    border: 0;
+}
+.videos .videos-img-container .middle{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.1em;
+    opacity: 0;
+    z-index: 2;
+}
+.videos .videos-img-container .overlay:hover > img {
+    opacity: 0.4;
+}
+
+.videos .videos-img-container .overlay:hover .middle {
+    opacity: 1;
+}
+.videos .videos-img-container .middle i{
+    color: #FFF;
+    font-size: 28px;
+}  
+/* play instructions section style */
+.play-instructions{
+    padding: 0px 200px;
+    display: flex;
+    gap: 70px;
+    justify-content: space-between;
+    align-items: center;
+}
+.play-instructions-content{
+    text-align: right;
+    max-width: 400px;
+    
+}
+.play-instructions-content h2{
+    color: #0B0223;
+}
+.play-instructions-content h2 span{
+    background: -webkit-linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.play-instructions img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.play-instructions-img{
+    margin-left: 68px;
+}
+.play-instructions .left-img{
+    max-width: 176px;
+    position: relative;
+    bottom: 160px;
+    right: 90px;
+    
+}
 /* responsive styles */
 @media screen and (max-width:576px){
     nav{
@@ -154,6 +302,59 @@ nav button span i:first-child {
     nav li{
         margin-bottom: 36px;
     }
+    .banner{
+        display: grid;
+        padding: 0;
+        margin-top: 240px;
+    }
+    .banner .banner-content{
+        margin: 25px;
+        flex: 1;
+        order: 2;
+    }
+    .banner .profile-pic{
+        width: 100%;
+        
+    }
+    .banner-title1, .banner-title2{
+        text-align: center;
+        margin: 0;
+    }
+    .banner .list-content{
+        display: flex;
+        justify-content: center;
+    }
+    .about{
+        display: grid;
+        flex: 1;
+        order: 2;
+        padding: 0;
+    }
+    .about img{
+        width: 100%;
+    }
+    .about .about-info{
+        margin: 25px;
+        text-align: center;
+    }
+    .videos{
+        padding: 0;
+        margin: 25px;
+    }
+    .videos .videos-img-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+    }
+    .play-instructions{
+        display: block;
+        padding: 0;
+        margin: 25px;
+    }
+    .play-instructions-content{
+        text-align: center;
+    }
+  
 }
 @media screen and (min-width:576px) and (max-width:1200px){
     nav{
@@ -167,5 +368,17 @@ nav button span i:first-child {
     }
     nav li{
         margin-bottom: 36px;
+    }
+    .banner{
+        display: block;
+        padding: 0;
+        margin-top: 240px;
+    }
+    .banner .profile-pic{
+        width: 100%;
+        
+    }
+    .banner-content{
+        text-align: center;
     }
 }
