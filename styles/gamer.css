@@ -504,4 +504,49 @@ nav button span i:first-child {
         margin: 25px;
         text-align: center;
     }
+    .videos{
+        padding: 0;
+        margin: 25px;
+    }
+    .videos .videos-img-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+    .play-instructions{
+        display: block;
+        padding: 0;
+        margin: 25px;
+    }
+    .play-instructions-content{
+        text-align: center;
+        max-width: none;
+    }
+    .games-types{
+        padding: 0;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 25px;
+    }
+    .games-types-content{
+        padding: 0px 18px;
+    }
+    .footer{
+        padding: 25px 0;
+    }
+    .footer ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+    .footer .social-links{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+    .footer .content ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        gap: 8px;
+    }
 }
